@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <!-- Flag JS early so reveal animations only hide content when JS can reveal it -->
+  <script>document.documentElement.classList.add("js");</script>
+  <meta name="description" content="[Your Name] — [Target Role]. Portfolio of work, projects, and the thinking behind them." />
+  <title>[Your Name] — [Target Role]</title>
+
+  <!-- Fonts: Space Grotesk (display), IBM Plex Sans (body), JetBrains Mono (utility) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Ambient field: pointer-reactive spotlight + dot grid. Decorative only. -->
+  <div class="field" aria-hidden="true">
+    <div class="field__grid"></div>
+    <div class="field__spot"></div>
+  </div>
+
+  <!-- Fixed HUD side-rail: the section index. Real ordered navigation. -->
+  <nav class="rail" aria-label="Section index">
+    <ol class="rail__list">
+      <li><a class="rail__item" href="#hero"><span class="rail__num">00</span><span class="rail__label">Top</span></a></li>
+      <li><a class="rail__item" href="#about"><span class="rail__num">01</span><span class="rail__label">About</span></a></li>
+      <li><a class="rail__item" href="#work"><span class="rail__num">02</span><span class="rail__label">Work</span></a></li>
+      <li><a class="rail__item" href="#skills"><span class="rail__num">03</span><span class="rail__label">Skills</span></a></li>
+      <li><a class="rail__item" href="#experience"><span class="rail__num">04</span><span class="rail__label">Path</span></a></li>
+      <li><a class="rail__item" href="#contact"><span class="rail__num">05</span><span class="rail__label">Contact</span></a></li>
+    </ol>
+  </nav>
+
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#hero" aria-label="[Your Name] — home">
+        <span class="nav__mark" aria-hidden="true"></span>
+        <span class="nav__name">[Your&nbsp;Name]</span>
+      </a>
+
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Path</a>
+        <a class="nav__cta" href="#contact">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="wrap">
+        <p class="eyebrow reveal" data-reveal>
+          <span class="eyebrow__dot"></span>
+          Portfolio — <span class="eyebrow__muted">edition 2026</span>
+        </p>
+
+        <h1 class="hero__title">
+          <span class="reveal" data-reveal style="--d:1">[Your Name]</span>
+        </h1>
+
+        <p class="hero__role reveal" data-reveal style="--d:2">
+          [Target Role] — building considered, fast, accessible interfaces.
+        </p>
+
+        <p class="hero__lede reveal" data-reveal style="--d:3">
+          I design and build the kind of details people feel but can't name:
+          tight hierarchy, motion that whispers, and interfaces that stay calm
+          under load. This site is the proof, not the pitch.
+        </p>
+
+        <div class="hero__actions reveal" data-reveal style="--d:4">
+          <a class="btn btn--primary" href="#work">
+            View selected work
+            <svg class="btn__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#contact">Start a conversation</a>
+        </div>
+
+        <dl class="hero__status reveal" data-reveal style="--d:5">
+          <div class="hero__stat">
+            <dt>Status</dt>
+            <dd><span class="pulse" aria-hidden="true"></span>Open to [opportunities]</dd>
+          </div>
+          <div class="hero__stat">
+            <dt>Based in</dt>
+            <dd>[City, Region]</dd>
+          </div>
+          <div class="hero__stat">
+            <dt>Focus</dt>
+            <dd>Front-end · interaction · craft</dd>
+          </div>
+        </dl>
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="Scroll to about">
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" tabindex="-1">
+      <div class="wrap">
+        <header class="section__head reveal" data-reveal>
+          <p class="section__eyebrow"><span class="section__num">01</span> About</p>
+          <h2 class="section__title">A short version of the longer story.</h2>
+        </header>
+
+        <div class="about">
+          <div class="about__lead reveal" data-reveal>
+            <p>
+              I came to building software the practical way — by needing things
+              to work and caring how they felt while doing it. [One or two sentences
+              about your real background: e.g. years in healthcare or sales, what
+              you learned about people, why you moved toward building.]
+            </p>
+            <p>
+              Today I'm focused on [what you're building toward]: shipping
+              interfaces that are quick, legible, and accessible by default. I like
+              the unglamorous parts — empty states, focus order, the second tap —
+              because that's where products earn trust.
+            </p>
+          </div>
+
+          <ul class="principles reveal" data-reveal>
+            <li class="principle">
+              <span class="principle__k">Clarity over cleverness</span>
+              <span class="principle__v">If a visitor has to decode it, I haven't finished it.</span>
+            </li>
+            <li class="principle">
+              <span class="principle__k">Performance is a feature</span>
+              <span class="principle__v">Fast is part of how a product feels honest.</span>
+            </li>
+            <li class="principle">
+              <span class="principle__k">Accessible by default</span>
+              <span class="principle__v">Keyboard, contrast, and reduced-motion aren't extras.</span>
+            </li>
+            <li class="principle">
+              <span class="principle__k">Finish the details</span>
+              <span class="principle__v">The last 10% is the part people remember.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work" tabindex="-1">
+      <div class="wrap">
+        <header class="section__head reveal" data-reveal>
+          <p class="section__eyebrow"><span class="section__num">02</span> Selected work</p>
+          <h2 class="section__title">A few things worth showing.</h2>
+        </header>
+
+        <div class="projects">
+
+          <article class="project reveal" data-reveal data-tilt>
+            <div class="project__index">01</div>
+            <div class="project__body">
+              <header class="project__head">
+                <h3 class="project__name">[Project One]</h3>
+                <p class="project__purpose">[One line on what it is and who it's for.]</p>
+              </header>
+              <dl class="project__meta">
+                <div><dt>Problem</dt><dd>[The real problem it solves, in one sentence.]</dd></div>
+                <div><dt>My role</dt><dd>[What you personally designed and built.]</dd></div>
+                <div><dt>Outcome</dt><dd>[Result, lesson, or current status.]</dd></div>
+              </dl>
+              <ul class="tags">
+                <li>[React]</li><li>[TypeScript]</li><li>[Node]</li><li>[Postgres]</li>
+              </ul>
+              <div class="project__links">
+                <a class="link" href="[Live URL]">Live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <a class="link" href="[GitHub URL]">Code</a>
+                <a class="link" href="[Case study URL]">Case study</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-reveal data-tilt>
+            <div class="project__index">02</div>
+            <div class="project__body">
+              <header class="project__head">
+                <h3 class="project__name">[Project Two]</h3>
+                <p class="project__purpose">[One line on what it is and who it's for.]</p>
+              </header>
+              <dl class="project__meta">
+                <div><dt>Problem</dt><dd>[The real problem it solves, in one sentence.]</dd></div>
+                <div><dt>My role</dt><dd>[What you personally designed and built.]</dd></div>
+                <div><dt>Outcome</dt><dd>[Result, lesson, or current status.]</dd></div>
+              </dl>
+              <ul class="tags">
+                <li>[Next.js]</li><li>[Tailwind]</li><li>[Prisma]</li>
+              </ul>
+              <div class="project__links">
+                <a class="link" href="[Live URL]">Live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <a class="link" href="[GitHub URL]">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-reveal data-tilt>
+            <div class="project__index">03</div>
+            <div class="project__body">
+              <header class="project__head">
+                <h3 class="project__name">[Project Three]</h3>
+                <p class="project__purpose">[One line on what it is and who it's for.]</p>
+              </header>
+              <dl class="project__meta">
+                <div><dt>Problem</dt><dd>[The real problem it solves, in one sentence.]</dd></div>
+                <div><dt>My role</dt><dd>[What you personally designed and built.]</dd></div>
+                <div><dt>Outcome</dt><dd>[Result, lesson, or current status.]</dd></div>
+              </dl>
+              <ul class="tags">
+                <li>[Vanilla JS]</li><li>[Canvas]</li><li>[Web APIs]</li>
+              </ul>
+              <div class="project__links">
+                <a class="link" href="[GitHub URL]">Code</a>
+                <a class="link" href="[Demo URL]">Demo</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills" tabindex="-1">
+      <div class="wrap">
+        <header class="section__head reveal" data-reveal>
+          <p class="section__eyebrow"><span class="section__num">03</span> Toolkit</p>
+          <h2 class="section__title">What I reach for, grouped by job.</h2>
+        </header>
+
+        <div class="skills">
+          <div class="skillgroup reveal" data-reveal>
+            <h3 class="skillgroup__title">Front end</h3>
+            <ul class="skillgroup__list">
+              <li>HTML &amp; semantic markup</li>
+              <li>CSS architecture &amp; design tokens</li>
+              <li>JavaScript / TypeScript</li>
+              <li>React · Next.js</li>
+              <li>Accessibility (WCAG)</li>
+            </ul>
+          </div>
+          <div class="skillgroup reveal" data-reveal>
+            <h3 class="skillgroup__title">Back end &amp; data</h3>
+            <ul class="skillgroup__list">
+              <li>Node.js · REST APIs</li>
+              <li>PostgreSQL · SQL</li>
+              <li>Auth &amp; sessions</li>
+              <li>[Your stack here]</li>
+            </ul>
+          </div>
+          <div class="skillgroup reveal" data-reveal>
+            <h3 class="skillgroup__title">Craft &amp; design</h3>
+            <ul class="skillgroup__list">
+              <li>Interaction &amp; motion</li>
+              <li>Type &amp; layout systems</li>
+              <li>Figma → build handoff</li>
+              <li>Responsive, mobile-first</li>
+            </ul>
+          </div>
+          <div class="skillgroup reveal" data-reveal>
+            <h3 class="skillgroup__title">Tooling &amp; AI</h3>
+            <ul class="skillgroup__list">
+              <li>Git · GitHub · CI</li>
+              <li>Vite · modern bundlers</li>
+              <li>AI-assisted development</li>
+              <li>Testing &amp; profiling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE / PATH ============ -->
+    <section class="section" id="experience" tabindex="-1">
+      <div class="wrap">
+        <header class="section__head reveal" data-reveal>
+          <p class="section__eyebrow"><span class="section__num">04</span> Path</p>
+          <h2 class="section__title">How I got here — in order.</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="tl reveal" data-reveal>
+            <div class="tl__when">[2024 — now]</div>
+            <div class="tl__what">
+              <h3 class="tl__title">[Current role / focus]</h3>
+              <p class="tl__org">[Company / self-directed]</p>
+              <p class="tl__note">[One line on what you do and a transferable strength it proves.]</p>
+            </div>
+          </li>
+          <li class="tl reveal" data-reveal>
+            <div class="tl__when">[2023]</div>
+            <div class="tl__what">
+              <h3 class="tl__title">[Training / bootcamp / project work]</h3>
+              <p class="tl__org">[Program name]</p>
+              <p class="tl__note">[What you built and learned; how it changed how you work.]</p>
+            </div>
+          </li>
+          <li class="tl reveal" data-reveal>
+            <div class="tl__when">[Earlier]</div>
+            <div class="tl__what">
+              <h3 class="tl__title">[Prior career — e.g. healthcare / sales]</h3>
+              <p class="tl__org">[Employer]</p>
+              <p class="tl__note">[The transferable strength: communication, ownership, working under pressure.]</p>
+            </div>
+          </li>
+          <li class="tl reveal" data-reveal>
+            <div class="tl__when">[Credentials]</div>
+            <div class="tl__what">
+              <h3 class="tl__title">[Certifications &amp; education]</h3>
+              <p class="tl__org">[Issuer]</p>
+              <p class="tl__note">[Only the ones that matter to the role you want.]</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--contact" id="contact" tabindex="-1">
+      <div class="wrap">
+        <header class="section__head reveal" data-reveal>
+          <p class="section__eyebrow"><span class="section__num">05</span> Contact</p>
+          <h2 class="section__title contact__title">
+            Have something worth building? Let's talk.
+          </h2>
+        </header>
+
+        <div class="contact reveal" data-reveal>
+          <div class="contact__primary">
+            <p class="contact__lede">
+              The fastest way to reach me is email. I read everything and reply to
+              anything specific.
+            </p>
+            <a class="contact__email" href="mailto:[email@address.com]">[email@address.com]</a>
+            <ul class="contact__links">
+              <li><a class="link" href="[LinkedIn URL]">LinkedIn</a></li>
+              <li><a class="link" href="[GitHub URL]">GitHub</a></li>
+              <li><a class="link" href="[Resume URL]">Résumé (PDF)</a></li>
+            </ul>
+          </div>
+
+          <form class="form" action="mailto:[email@address.com]" method="post" enctype="text/plain" novalidate>
+            <div class="form__row">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="form__row">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="form__row">
+              <label for="f-msg">Message</label>
+              <textarea id="f-msg" name="message" rows="4" required></textarea>
+            </div>
+            <button class="btn btn--primary form__submit" type="submit">
+              Send message
+            </button>
+            <p class="form__note">Opens your email client. Prefer direct? Use the address above.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p class="footer__copy">© <span id="year">2026</span> [Your Name]. Built by hand.</p>
+      <a class="footer__top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
